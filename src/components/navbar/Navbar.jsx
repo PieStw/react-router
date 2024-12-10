@@ -3,34 +3,34 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          React router
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          Navbar
         </a>
         <button
-          className="navbar-toggler"
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <NavLink to="/">Home- </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/aboutus">About us- </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/postpage">Post List </NavLink>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <NavLink to="/" className={"nav-link active"}>
+              Home
+            </NavLink>
+            <NavLink to="/aboutus" className="nav-link">
+              About us
+            </NavLink>
+            <NavLink to="/postpage" className="nav-link">
+              Post List{" "}
+            </NavLink>
+          </div>
         </div>
       </div>
     </nav>
