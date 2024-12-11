@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Card.module.css";
+import { Link } from "react-router-dom";
 
 export default function Card({ element }) {
   return (
@@ -34,14 +35,12 @@ export default function Card({ element }) {
             >
               <i className="fa-solid fa-trash"></i>
             </button>
-            <button
+            <Link
               className="btn btn-primary me-2"
-              onClick={() => {
-                editArticle(index);
-              }}
+              to={`/postpage/detail/${element.id}`}
             >
               <i class="fa-solid fa-chevron-right"></i>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
